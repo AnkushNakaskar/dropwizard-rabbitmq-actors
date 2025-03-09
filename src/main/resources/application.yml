@@ -1,0 +1,20 @@
+server:
+  adminMinThreads: 1
+  adminMaxThreads: 64
+  applicationConnectors:
+    - type: http
+      port: 8078
+  adminConnectors:
+    - type: http
+      port: 8077
+defaultSize: 5
+logging:
+  level: INFO
+  loggers:
+    brave: WARN
+    TracingAspect: ERROR
+  appenders:
+    - type: console
+      threshold: TRACE
+      timeZone: IST
+      logFormat: "Ankushlog5 %(%-5level) %X{trace_id} %X{span_id} [%date] [%thread] [%logger]: %message%n"

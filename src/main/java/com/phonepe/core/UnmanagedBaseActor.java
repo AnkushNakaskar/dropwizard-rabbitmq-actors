@@ -14,11 +14,15 @@
  *  limitations under the License.
  */
 
-package io.appform.dropwizard.actors.actor;
+package com.phonepe.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rabbitmq.client.AMQP;
 import io.appform.dropwizard.actors.ConnectionRegistry;
+import io.appform.dropwizard.actors.actor.ActorConfig;
+import io.appform.dropwizard.actors.actor.ConsumerConfig;
+import io.appform.dropwizard.actors.actor.MessageHandlingFunction;
+import io.appform.dropwizard.actors.actor.ProducerConfig;
 import io.appform.dropwizard.actors.base.UnmanagedConsumer;
 import io.appform.dropwizard.actors.base.UnmanagedPublisher;
 import io.appform.dropwizard.actors.common.Constants;
