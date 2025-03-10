@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.appform.dropwizard.actors</groupId>
-    <artifactId>dropwizard-rabbitmq-actors</artifactId>
-    <version>2.0.28-13-Ankush</version>
-    <name>Dropwizard RabbitMQ Bundle</name>
-    <url>https://github.com/santanusinha/dropwizard-rabbitmq-actors</url>
-    <description>Provides actor abstraction on RabbitMQ for dropwizard based projects.</description>
-    <inceptionYear>2016</inceptionYear>
+    <groupId>io.test.opentracing.annotations-scratch</groupId>
+    <artifactId>opentracing-annotations-scratch</artifactId>
+    <version>1.0.4</version>
+
+    <name>OpenTracing Annotations</name>
+    <url>https://github.com/appform-io/opentracing-annotations</url>
+    <description>Annotation based function level tracing</description>
+    <inceptionYear>2021</inceptionYear>
+
+
     <scm>
-        <connection>scm:git:https://github.com/santanusinha/dropwizard-rabbitmq-actors.git</connection>
-        <developerConnection>scm:git:https://github.com/santanusinha/dropwizard-rabbitmq-actors.git</developerConnection>
+        <connection>scm:git:https://github.com/appform-io/opentracing-annotations.git</connection>
+        <developerConnection>scm:git:https://github.com/appform-io/opentracing-annotations.git</developerConnection>
         <tag>HEAD</tag>
-        <url>https://github.com/santanusinha/dropwizard-rabbitmq-actors.git</url>
+        <url>https://github.com/appform-io/opentracing-annotations.git</url>
     </scm>
 
     <licenses>
@@ -27,58 +31,25 @@
         </license>
     </licenses>
 
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/santanusinha/dropwizard-rabbitmq-actors/issues</url>
-    </issueManagement>
-
     <developers>
         <developer>
-            <id>santanusinha</id>
-            <name>Santanu Sinha</name>
-            <email>santanu.sinha@gmail.com</email>
-            <roles>
-                <role>owner</role>
-                <role>developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>namanmishra91</id>
-            <name>Naman Mishra</name>
-            <email>namanmishra1991@gmail.com</email>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>r0goyal</id>
-            <name>Rishabh Goyal</name>
-            <email>rgoyal2191@gmail.com</email>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>vidhyashankar.m</id>
-            <name>Vidhyashankar M</name>
-            <email>vidhyashankar.it@gmail.com</email>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>SwapnilBGaikwad</id>
-            <name>Swapnil B Gaikwad</name>
-            <email>swapnil.gaikwad@phonepe.com</email>
+            <id>Kanikakhetawat</id>
+            <name>Kanika Khetawat</name>
+            <email>kanikakhetawat.kk@gmail.com</email>
             <roles>
                 <role>developer</role>
             </roles>
         </developer>
     </developers>
 
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/appform-io/opentracing-annotations/issues</url>
+    </issueManagement>
+
     <ciManagement>
         <system>Travis CI</system>
-        <url>https://travis-ci.org/santanusinha/dropwizard-rabbitmq-actors</url>
+        <url>https://travis-ci.org/github/appform-io/opentracing-annotations</url>
     </ciManagement>
 
     <distributionManagement>
@@ -95,204 +66,36 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dropwizard.version>2.0.23</dropwizard.version>
-
-        <guice.version>5.1.0</guice.version>
-        <dropwizard.guicey.version>5.4.2</dropwizard.guicey.version>
-        <dropwizard.swagger.version>2.0.23-1</dropwizard.swagger.version>
-
-        <lombok.version>1.18.26</lombok.version>
-        <guava.version>33.3.1-jre</guava.version>
-        <okhttp.version>4.9.3</okhttp.version>
-        <amqp-client.version>5.25.0</amqp-client.version>
-        <mockito.version>4.4.0</mockito.version>
         <aspectj.version>1.9.6</aspectj.version>
+        <opentracing.version>0.33.0</opentracing.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <junit.jupiter.version>5.6.0</junit.jupiter.version>
         <maven.shade.version>3.3.0</maven.shade.version>
-
-        <rosey.dropwizard.config>2.0.74</rosey.dropwizard.config>
-        <data.provider.version>2.15</data.provider.version>
+        <dropwizard.version>2.0.23</dropwizard.version>
+        <opentracing.brave.version>0.37.5</opentracing.brave.version>
+        <brave.version>5.13.1</brave.version>
+        <zipkin.reporter.version>2.16.2</zipkin.reporter.version>
+        <zipkin.sender.http.version>2.23.3-17</zipkin.sender.http.version>
 
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>net.java.dev.jna</groupId>
-                <artifactId>jna</artifactId>
-                <version>5.8.0</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
+            <groupId>io.opentracing</groupId>
+            <artifactId>opentracing-api</artifactId>
+            <version>${opentracing.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito.version}</version>
+            <groupId>io.opentracing</groupId>
+            <artifactId>opentracing-util</artifactId>
+            <version>${opentracing.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.opentracing</groupId>
+            <artifactId>opentracing-mock</artifactId>
+            <version>${opentracing.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-core</artifactId>
-            <version>${dropwizard.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-metrics</artifactId>
-            <version>${dropwizard.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-jackson</artifactId>
-            <version>${dropwizard.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-validation</artifactId>
-            <version>${dropwizard.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-forms</artifactId>
-            <version>${dropwizard.version}</version>
-        </dependency>
-
-        <dependency>
-            <artifactId>guice</artifactId>
-            <groupId>com.google.inject</groupId>
-            <version>${guice.version}</version>
-        </dependency>
-        <dependency>
-            <artifactId>dropwizard-guicey</artifactId>
-            <groupId>ru.vyarus</groupId>
-            <version>${dropwizard.guicey.version}</version>
-        </dependency>
-
-        <dependency>
-            <artifactId>dropwizard-swagger</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>reflections</artifactId>
-                    <groupId>org.reflections</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>guava</artifactId>
-                    <groupId>com.google.guava</groupId>
-                </exclusion>
-            </exclusions>
-            <groupId>in.vectorpro.dropwizard</groupId>
-            <version>${dropwizard.swagger.version}</version>
-        </dependency>
-
-        <!-- Added this library for java 11 compatibility-->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rabbitmq</groupId>
-            <artifactId>amqp-client</artifactId>
-            <version>${amqp-client.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.rholder</groupId>
-            <artifactId>guava-retrying</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
-        </dependency>
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-testing</artifactId>
-            <version>${dropwizard.version}</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>junit</groupId>
-                    <artifactId>junit</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>jupiter-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.10.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>rabbitmq</artifactId>
-            <version>1.18.3</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.awaitility</groupId>
-            <artifactId>awaitility</artifactId>
-            <version>4.1.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-            <version>${okhttp.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.stefanbirkner</groupId>
-            <artifactId>system-rules</artifactId>
-            <version>1.19.0</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>junit</groupId>
-                    <artifactId>junit-dep</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>5.8.1</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.appform.opentracing.annotations</groupId>
-            <artifactId>opentracing-annotations</artifactId>
-            <version>1.0.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.8.9</version>
-        </dependency>
-
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
@@ -303,78 +106,43 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
-
         <dependency>
-            <groupId>com.phonepe.platform</groupId>
-            <artifactId>rosey-dropwizard-config</artifactId>
-            <version>${rosey.dropwizard.config}</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.3.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.opentracing.brave</groupId>
+            <artifactId>brave-opentracing</artifactId>
+            <version>${opentracing.brave.version}</version>
             <exclusions>
                 <exclusion>
-                    <groupId>org.hibernate</groupId>
-                    <artifactId>*</artifactId>
+                    <groupId>io.opentracing</groupId>
+                    <artifactId>opentracing-api</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
-
         <dependency>
-            <groupId>com.phonepe.data.provider</groupId>
-            <artifactId>rosey-data-provider-bundle</artifactId>
-            <version>${data.provider.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.glassfish.jersey.core</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.glassfish.jersey.inject</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-context-slf4j</artifactId>
+            <version>${brave.version}</version>
         </dependency>
 
     </dependencies>
 
     <build>
-
         <plugins>
-            <plugin>
-                <artifactId>maven-shade-plugin</artifactId>
-                <configuration>
-                    <createDependencyReducedPom>true</createDependencyReducedPom>
-                    <filters>
-                        <filter>
-                            <artifact>*:*</artifact>
-                            <excludes>
-                                <exclude>META-INF/*.SF</exclude>
-                                <exclude>META-INF/*.DSA</exclude>
-                                <exclude>META-INF/*.RSA</exclude>
-                            </excludes>
-                        </filter>
-                    </filters>
-                </configuration>
-                <executions>
-                    <execution>
-                        <configuration>
-                            <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <manifestEntries>
-                                        <Build-Number>${build.number}</Build-Number>
-                                        <Git-Commit>${build.revision}</Git-Commit>
-                                        <Main-Class>com.phonepe.core.OpenTracingApp</Main-Class>
-                                    </manifestEntries>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <phase>package</phase>
-                    </execution>
-                </executions>
-                <groupId>org.apache.maven.plugins</groupId>
-                <version>${maven.shade.version}</version>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -383,6 +151,24 @@
                     <target>17</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+
             <plugin>
                 <groupId>dev.aspectj</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
@@ -395,27 +181,77 @@
                     <verbose>true</verbose>
                     <Xlint>ignore</Xlint>
                     <encoding>UTF-8</encoding>
-                    <forceAjcCompile>true</forceAjcCompile>
-                    <sources />
-                    <weaveDirectories>
-                        <weaveDirectory>${project.build.directory}/classes</weaveDirectory>
-                    </weaveDirectories>
-                    <weaveDependencies>
-                        <weaveDependency>
-                            <groupId>io.appform.opentracing.annotations</groupId>
-                            <artifactId>opentracing-annotations</artifactId>
-                        </weaveDependency>
-                    </weaveDependencies>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>compile</goal>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <property>
+                    <name>release</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <useAgent>true</useAgent>
+                                    <executable>gpg2</executable>
+                                    <!-- Run something like 'gpg2 -ab out' to cache the creds
+                                     on agent before running if needed -->
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
