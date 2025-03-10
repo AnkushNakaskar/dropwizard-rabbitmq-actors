@@ -1,7 +1,7 @@
 package com.phonepe.core;
 
 import com.rabbitmq.client.MessageProperties;
-import com.phonepe.core.UnmanagedBaseActor;
+import io.appform.dropwizard.actors.actor.UnmanagedBaseActor;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.ws.rs.*;

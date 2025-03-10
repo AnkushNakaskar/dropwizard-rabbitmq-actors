@@ -17,7 +17,7 @@ public class RMQTracingPublishAspect {
     private static final Logger log = LoggerFactory.getLogger(RMQTracingPublishAspect.class.getSimpleName());
 
 
-    @Pointcut("execution(public final void com.phonepe.core.UnmanagedBaseActor.publish(..))")
+    @Pointcut("execution(public final void io.appform.dropwizard.actors.actor.UnmanagedBaseActor.publish(..))")
     public void finalMethodExecution() {}
 
     @Around("finalMethodExecution()")
