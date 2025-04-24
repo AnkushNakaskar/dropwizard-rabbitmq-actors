@@ -7,13 +7,13 @@ import io.appform.dropwizard.actors.config.RMQConfig;
 import io.appform.dropwizard.actors.observers.ConsumeObserverContext;
 import io.appform.dropwizard.actors.observers.PublishObserverContext;
 import io.appform.dropwizard.actors.observers.RMQObserver;
-import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
-import lombok.val;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 
 /**
  * An Observer that ingests queue metrics.
